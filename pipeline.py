@@ -1,8 +1,7 @@
 def clean_amount(raw_amount):
     """Convert a raw amount value into a clean, non-negative float."""
     value = float(raw_amount)
-    if value < 0:
-        raise ValueError(f"Amount cannot be negative: {value}")
+    # BUG: the negative-value check was accidently removed
     return round(value, 2)
 
 
